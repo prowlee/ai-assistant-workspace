@@ -1,5 +1,5 @@
 ---
-name: tech-news-curation
+name: xs:tech-news-curation
 description: RSSフィードからAI・技術系の最新ニュースを取得して紹介するスキル。「テックニュース」「最新のニュース教えて」「技術ニュースまとめて」で使用。
 ---
 

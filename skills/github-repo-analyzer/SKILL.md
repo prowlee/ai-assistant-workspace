@@ -1,5 +1,5 @@
 ---
-name: github-repo-analyzer
+name: xs:github-repo-analyzer
 description: GitHubリポジトリの内容を詳しく分析するスキル。Deepwiki優先で構造化情報を取得し、使えない場合はgh CLIで分析。リポジトリ構造・技術スタック・主要ファイルを整理して報告。「リポジトリ分析して」「このリポジトリ見て」で使用。
 ---
 

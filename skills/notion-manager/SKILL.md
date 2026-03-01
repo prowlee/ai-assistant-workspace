@@ -1,5 +1,5 @@
 ---
-name: notion-manager
+name: xs:notion-manager
 description: Notion APIでページ検索・閲覧・作成、ファイルアップロード、画像付き日記作成を行うスキル。「Notionで検索して」「Notionに日記書いて」「Notionにファイルアップロードして」で使用。
 ---
 

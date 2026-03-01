@@ -1,5 +1,5 @@
 ---
-name: marp-slides
+name: xs:marp-slides
 description: Marp（Markdown Presentation）でプレゼンスライドを作成するスキル。PDF/PPTX/HTMLに変換可能。「スライド作って」「プレゼン資料を作って」で使用。
 ---
 

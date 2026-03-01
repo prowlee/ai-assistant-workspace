@@ -1,5 +1,5 @@
 ---
-name: podcast
+name: xs:podcast
 description: ポッドキャストの音声取得・文字起こし・まとめを行う統合スキル。「ポッドキャストまとめて」「音声配信をダウンロード」「Podcastの内容を教えて」で使用。
 ---
 

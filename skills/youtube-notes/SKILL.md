@@ -1,5 +1,5 @@
 ---
-name: youtube-notes
+name: xs:youtube-notes
 description: YouTube動画のURLから字幕を取得し、内容をノートにまとめる。「YouTube動画をまとめて」「この動画をノートにして」と言われたら使う。
 ---
 

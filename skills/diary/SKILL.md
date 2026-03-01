@@ -1,5 +1,5 @@
 ---
-name: diary
+name: xs:diary
 description: |
   日記スキル。日次の振り返りとNotion連携。
   「日記書いて」「日記の時間」「今日やったこと記録して」「diary」で発動。
