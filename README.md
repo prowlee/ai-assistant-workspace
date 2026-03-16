@@ -1,179 +1,179 @@
-# ai-assistant-workspace
+# AI助手工作区
 
-あなた専用のAIアシスタント・ワークスペースです。
+这是专属于您的AI助手工作区。
 
-AIコーディングツール（Claude Code / Codex CLI / Gemini CLI）をパーソナルアシスタントとして活用するためのスターターキットです。初回起動時に対話形式であなた専用のアシスタントが作られます。
+这是一个入门套件，旨在将AI编码工具（Claude Code / Codex CLI / Gemini CLI）用作您的个人助手。首次启动时，将通过对话形式为您创建专属助手。
 
-[xangi](https://github.com/karaage0703/xangi)（Discord常駐型AIアシスタント）の推奨ワークスペースです。xangiと組み合わせることで、チャットからスキルを呼び出して日常タスクを自動化できます。
+这也是 [xangi](https://github.com/karaage0703/xangi)（常驻Discord的AI助手）的推荐工作区。与xangi结合使用，可以通过聊天调用技能，实现日常任务的自动化。
 
-## できること
+## 功能特性
 
-- **メモ管理** — 調査結果・アイデア・会議メモを整理して保存
-- **日記** — 日々の記録をNotionと連携して管理
-- **猫日記** — 猫の写真を送ると自動判定してNotionに記録
-- **Notion連携** — ページの検索・作成・ファイルアップロード
-- **音声文字起こし** — 音声ファイルをテキストに変換
-- **ポッドキャスト** — ポッドキャストのダウンロード・要約（プリセット番組あり）
-- **YouTube** — YouTube動画の内容をノートにまとめる
-- **プレゼン作成** — マークダウンからスライドを生成
-- **テックニュース** — 最新のAI・技術ニュースを収集・紹介
-- **arXiv論文調査** — 論文検索・トレンド発見・詳細分析を統合的に実行
-- **コードレビュー** — マルチAI（Claude/Codex/Gemini）でPRを体系的にレビュー
-- **GitHubリポジトリ分析** — リポジトリの構造・技術スタックを分析
-- **ワークスペース検索** — ファイルをベクトル検索で横断検索
-- **カレンダー** — ICSカレンダー（Googleカレンダー等）の予定を確認
-- **健康管理** — 食事・運動の記録と健康アドバイス
-- **設定変更** — チャットからAIアシスタントの設定を変更（xangi利用時）
-- **自発的おしゃべり** — AIが自発的に話しかけてくる（確率判定＋cron対応）
-- **スキル作成** — 自分だけのカスタムスキルを作る
+- **笔记管理** — 整理并保存调研结果、想法、会议记录
+- **日记** — 与Notion联动，管理日常记录
+- **猫咪日记** — 发送猫咪照片即可自动识别并记录到Notion
+- **Notion联动** — 搜索、创建页面，上传文件
+- **语音转文字** — 将音频文件转换为文本
+- **播客** — 下载并总结播客内容（内置预设节目）
+- **YouTube** — 将YouTube视频内容整理成笔记
+- **制作演示文稿** — 从Markdown生成幻灯片
+- **科技新闻** — 收集并介绍最新的AI及技术新闻
+- **arXiv论文调研** — 集成执行论文搜索、发现趋势、详细分析
+- **代码审查** — 使用多AI（Claude/Codex/Gemini）对PR进行系统性审查
+- **GitHub仓库分析** — 分析仓库结构和技术栈
+- **工作区搜索** — 通过向量搜索跨文件检索内容
+- **日历** — 查看ICS日历（如Google日历）的日程安排
+- **健康管理** — 记录饮食、运动并获取健康建议
+- **设置更改** — 通过聊天更改AI助手的设置（使用xangi时）
+- **主动聊天** — AI会主动发起对话（基于概率判断+支持cron）
+- **创建技能** — 打造您自己的自定义技能
 
-## クイックスタート
+## 快速开始
 
-### 必要なもの
+### 准备工作
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)、[Codex CLI](https://github.com/openai/codex)、[Gemini CLI](https://github.com/google-gemini/gemini-cli) のいずれか
-- Discordで使う場合: [xangi](https://github.com/karaage0703/xangi)
+- 安装 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)、[Codex CLI](https://github.com/openai/codex) 或 [Gemini CLI](https://github.com/google-gemini/gemini-cli) 之一
+- 如需在Discord中使用: 需要 [xangi](https://github.com/karaage0703/xangi)
 
-### セットアップ手順
+### 设置步骤
 
 ```bash
-# 1. リポジトリをクローン
+# 1. 克隆仓库
 git clone https://github.com/karaage0703/ai-assistant-workspace
 cd ai-assistant-workspace
 
-# 2. AIツールを起動（いずれか）
-claude          # Claude Code の場合
-codex           # Codex CLI の場合
-gemini          # Gemini CLI の場合
+# 2. 启动AI工具（任选其一）
+claude          # 使用 Claude Code 时
+codex           # 使用 Codex CLI 时
+gemini          # 使用 Gemini CLI 时
 
-# 3. 自動セットアップが始まります
-# AIがあなたに質問して、あなた専用のアシスタントを作ります
+# 3. 自动设置开始
+# AI会向您提问，并为您创建专属助手
 ```
 
-Claude Code の場合、`.claude/skills` → `skills/` のシンボリックリンクがリポジトリに含まれているため、クローンするだけでスキルが使えます。
+对于 Claude Code，仓库中已包含从 `.claude/skills` 到 `skills/` 的符号链接，因此克隆后即可直接使用技能。
 
-## ディレクトリ構成
+## 目录结构
 
 ```
 ai-assistant-workspace/
-├── AGENTS.md              # 設定ファイル（全ツール共通）
-├── CLAUDE.md              # → AGENTS.md へのシンボリックリンク
-├── GEMINI.md              # → AGENTS.md へのシンボリックリンク
-├── BOOTSTRAP.md           # 初回セットアップ用（セットアップ後に削除されます）
+├── AGENTS.md              # 配置文件（所有工具通用）
+├── CLAUDE.md              # → 指向 AGENTS.md 的符号链接
+├── GEMINI.md              # → 指向 AGENTS.md 的符号链接
+├── BOOTSTRAP.md           # 用于首次设置（设置完成后将被删除）
 ├── .claude/
-│   └── skills -> ../skills  # Claude Code 用シンボリックリンク
+│   └── skills -> ../skills  # Claude Code 用的符号链接
 ├── .agents/
-│   └── skills -> ../skills  # Codex CLI 用シンボリックリンク
+│   └── skills -> ../skills  # Codex CLI 用的符号链接
 ├── .gemini/
-│   └── skills -> ../skills  # Gemini CLI 用シンボリックリンク
-├── memory/                # 日記・メモの保存先
-├── notes/                 # ノート・調査メモの保存先
-└── skills/                # スキル（AIの拡張機能）
-    ├── calendar/          # カレンダースキル
-    ├── cat-diary/         # 猫日記スキル
-    ├── diary/             # 日記スキル
-    ├── arxiv/             # arXiv論文調査スキル
-    ├── code-reviewer/     # コードレビュースキル
-    ├── github-repo-analyzer/ # GitHubリポジトリ分析スキル
-    ├── health-advisor/    # 健康管理スキル
-    ├── marp-slides/       # スライド作成スキル
-    ├── note-taking/       # メモ管理スキル
-    ├── notion-manager/    # Notion連携スキル
-    ├── podcast/           # ポッドキャストスキル
-    ├── skill-creator/     # スキル作成スキル
-    ├── tech-news-curation/# テックニューススキル
-    ├── transcriber/       # 文字起こしスキル
-    ├── spontaneous-talk/  # 自発的おしゃべりスキル
-    ├── workspace-rag/     # ワークスペース検索スキル
-    ├── xangi-settings/    # xangi設定変更スキル
-    └── youtube-notes/     # YouTubeノートスキル
+│   └── skills -> ../skills  # Gemini CLI 用的符号链接
+├── memory/                # 日记、笔记的保存位置
+├── notes/                 # 笔记、调研记录的保存位置
+└── skills/                # 技能（AI的扩展功能）
+    ├── calendar/          # 日历技能
+    ├── cat-diary/         # 猫咪日记技能
+    ├── diary/             # 日记技能
+    ├── arxiv/             # arXiv论文调研技能
+    ├── code-reviewer/     # 代码审查技能
+    ├── github-repo-analyzer/ # GitHub仓库分析技能
+    ├── health-advisor/    # 健康管理技能
+    ├── marp-slides/       # 幻灯片制作技能
+    ├── note-taking/       # 笔记管理技能
+    ├── notion-manager/    # Notion联动技能
+    ├── podcast/           # 播客技能
+    ├── skill-creator/     # 创建技能技能
+    ├── tech-news-curation/# 科技新闻技能
+    ├── transcriber/       # 语音转文字技能
+    ├── spontaneous-talk/  # 主动聊天技能
+    ├── workspace-rag/     # 工作区搜索技能
+    ├── xangi-settings/    # xangi设置更改技能
+    └── youtube-notes/     # YouTube笔记技能
 ```
 
-## 使い方のヒント
+## 使用技巧
 
-### メモを取る
+### 记笔记
 ```
-「調査結果をまとめて」
-「会議メモを保存して」
-「最近のメモ教えて」
-```
-
-### 日記を書く
-```
-「今日の日記を書いて」
-「日記の時間」
+“帮我总结一下调研结果”
+“保存会议记录”
+“告诉我最近的笔记”
 ```
 
-### 猫日記をつける
+### 写日记
 ```
-[猫の画像を送信]
-→ 自動で猫を検出してNotionに記録
-
-「今週の猫ベストショット」
+“写一下今天的日记”
+“到写日记的时间了”
 ```
 
-### プレゼン資料を作る
+### 记录猫咪日记
 ```
-「AIの歴史について5枚のスライドを作って」
-「このメモからプレゼン資料を作って」
+[发送猫咪图片]
+→ AI会自动检测猫咪并记录到Notion
+
+“这周的猫咪最佳照片”
 ```
 
-### arXiv論文を調べる
+### 制作演示文稿
 ```
-「LLMエージェントの最新論文を探して」
-「この1週間のAIトレンド論文を教えて」
-「論文 2401.12345 を詳しく分析して」
-```
-
-### PRをレビューする
-```
-「PR#123をレビューして」
-「owner/repo の PR#45 をコードレビューして」
+“做一个关于AI历史的5页幻灯片”
+“根据这个笔记制作演示文稿”
 ```
 
-### GitHubリポジトリを分析する
+### 调研arXiv论文
 ```
-「このリポジトリ分析して: owner/repo」
-「https://github.com/owner/repo を見て」
-```
-
-### ポッドキャストを聴く
-```
-「ポッドキャストの最新回をまとめて」
+“查找关于LLM代理的最新论文”
+“告诉我这周的AI趋势论文”
+“详细分析一下论文 2401.12345”
 ```
 
-### テックニュースをチェック
+### 审查PR
 ```
-「今日のテックニュースを教えて」
+“审查一下PR #123”
+“对 owner/repo 的 PR #45 进行代码审查”
 ```
 
-### カレンダーを確認する
+### 分析GitHub仓库
 ```
-「今日の予定」
-「今週のスケジュール確認」
+“分析一下这个仓库: owner/repo”
+“看一下 https://github.com/owner/repo”
+```
+
+### 收听播客
+```
+“总结一下播客的最新一期”
+```
+
+### 查看科技新闻
+```
+“告诉我今天的科技新闻”
+```
+
+### 查看日历
+```
+“今天的日程安排”
+“确认一下这周的日程”
 ```
 
 ### 健康管理
 ```
-「食事を記録して: ラーメン」
-「今週の健康レポート」
+“记录饮食：拉面”
+“这周的健康报告”
 ```
 
-### 自分だけのスキルを作る
+### 创建自己的技能
 ```
-「読書メモを管理するスキルを作って」
+“创建一个管理读书笔记的技能”
 ```
 
-## カスタマイズ
+## 自定义
 
-### AIの性格を変える
+### 改变AI的性格
 
-`AGENTS.md` の「自分について」セクションを編集すると、AIの話し方や性格を変えられます。
+编辑 `AGENTS.md` 中的“关于我自己”部分，可以改变AI的说话方式和性格。
 
-### スキルを追加する
+### 添加技能
 
-`skills/` ディレクトリにフォルダを作り、`SKILL.md` を書くだけで新しいスキルを追加できます。詳しくは `skills/README.md` を参照してください。
+只需在 `skills/` 目录下创建文件夹，并编写 `SKILL.md` 文件，即可添加新技能。详情请参考 `skills/README.md`。
 
-## ライセンス
+## 许可证
 
 MIT License
